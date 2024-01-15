@@ -1,11 +1,9 @@
-import Image from 'next/image'
+import Layout from '@/components/Layout';
 
 export default function Home() {
   return (
-    <main>
-      <div className='text-3xl font-bold'>
-        jumiz
-      </div>
-    </main>
-  )
+    <>
+      <Layout title="homepage">HOMEPAGE</Layout>
+    </>
+  );
 }
