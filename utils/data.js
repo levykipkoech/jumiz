@@ -1,0 +1,55 @@
+const data = {
+  products: [
+    {
+      name: 'free shirt',
+      slug: 'free shirt',
+      category: 'shirts',
+      image: '/image/shirt1.jpg',
+      price: 70,
+      brand: 'addidas',
+      rating: 4.5,
+      numofreviews: 14,
+      countInStock: 37,
+      description: 'cool jacket',
+    },
+
+    {
+      name: 'fit shirt',
+      slug: 'fit shirt',
+      category: 'shirts',
+      image: '/image/fit1.jpg',
+      price: 70,
+      brand: 'addidas',
+      rating: 3.2,
+      numofreviews: 14,
+      countInStock: 37,
+      description: 'cool shirtjacket',
+    },
+    {
+      name: 'slim shirt',
+      slug: 'slim shirt',
+      category: 'shirts',
+      image: '/image/shirt1.jpg',
+      price: 70,
+      brand: 'addidas',
+      rating: 4.7,
+      numofreviews: 10,
+      countInStock: 12,
+      description: 'cool shirt',
+    },
+    {
+      name: 'cargo pants',
+      slug: 'cargo pants',
+      category: 'pants',
+      image: '/image/pants1.jpg',
+      price: 100,
+      brand: 'addidas',
+      rating: 4.5,
+      numofreviews: 12,
+      countInStock: 17,
+      description: 'cool pants',
+    },
+  ],
+};
+
+export default data
