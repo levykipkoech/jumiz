@@ -6,15 +6,16 @@ export default function Layout({ title, children }) {
   return (
     <div>
       <Head>
-        <title>{title ? title + '-Jumiz' : 'Jumiz'}</title>
+        <title>{`${title ? title + '-' : ''}Jumiz`}</title>
         <meta name="description" content="ecommerce website" />
         <link rel="icon" href="/flavi.ico" />
       </Head>
+
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 justify-between px-4 shadow-md items-center">
             <Link href="/" as="/" legacyBehavior>
-              <a className="text-lg font-bold">jumiz</a>
+              <a className="text-lg font-bold">Jumiz</a>
             </Link>
             <div>
               <Link href="/cart" as="/" legacyBehavior>
