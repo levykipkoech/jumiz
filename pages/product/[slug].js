@@ -1,4 +1,4 @@
-import Layout from '@/components/Display';
+import Display from '@/components/Display';
 import data from '@/utils/data';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ export default function ProductScreen() {
 
   return (
     <div>
-      <Layout title={product.name}>
+      <Display title={product.name}>
         <div className="py-2 bg-black">
           <Link href="/">back to products</Link>
         </div>
@@ -32,7 +32,7 @@ export default function ProductScreen() {
             ></Image>
           </div>
         </div>
-      </Layout>
+      </Display>
     </div>
   );
 }

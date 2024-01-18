@@ -14,14 +14,14 @@ export default function Display({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 justify-between px-4 shadow-md items-center">
-            <Link href="/" as="/" legacyBehavior>
+            <Link href="/">
               <a className="text-lg font-bold">Jumiz</a>
             </Link>
             <div>
-              <Link href="/cart" as="/" legacyBehavior>
+              <Link href="/cart">
                 <a className="p-2">cart</a>
               </Link>
-              <Link href="/login" as="/" legacyBehavior>
+              <Link href="/login">
                 <a className="p-2">Login</a>
               </Link>
             </div>
@@ -35,3 +35,4 @@ export default function Display({ title, children }) {
     </div>
   );
 }
+
