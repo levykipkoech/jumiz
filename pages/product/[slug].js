@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+import Layout from '@/components/Display';
 import data from '@/utils/data';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,7 +6,8 @@ import { useRouter } from 'next/router';
 import React from 'react';
 
 export default function ProductScreen() {
-  const { query } = useRouter();
+  const router = useRouter();
+  const { query } = router;
   const { slug } = query;
   const product = data.products.find((x) => x.slug === slug);
 
@@ -15,23 +16,23 @@ export default function ProductScreen() {
   }
 
   return (
-    <>
-    <Layout title={product.name}>
-      <div className="py-2">
-        <Link href="/">back to products</Link>
-      </div>
-      <div className="grid md:grid-cols-4 md:gap-3">
-        <div className="md:span-2">
-          <Image
-            src={product.image}
-            alt={product.name}
-            width={640}
-            height={640}
-            layout="responsive"
-          ></Image>
+    <div>
+      <Layout title={product.name}>
+        <div className="py-2 bg-black">
+          <Link href="/">back to products</Link>
         </div>
-      </div>
-    </Layout>
-    </>
+        <div className="grid md:grid-cols-4 md:gap-3">
+          <div className="md:span-2">
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={640}
+              height={640}
+              priority
+            ></Image>
+          </div>
+        </div>
+      </Layout>
+    </div>
   );
 }
