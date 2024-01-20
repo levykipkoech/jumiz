@@ -20,7 +20,9 @@ export default function ProductItem({ product }) {
       </Link>
       <div className="flex flex-col items-center justify-center p-5">
         <Link href={`/product/${product.slug}`}>
+          
             {product.name}
+          
         </Link>
         <p className="mb-2">{product.brand}</p>
         <p>${product.price}</p>

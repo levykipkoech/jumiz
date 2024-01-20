@@ -1,16 +1,10 @@
 import React from 'react';
-import Head from 'next/head';
+//import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Display({ title, children }) {
+export default function Display({ children }) {
   return (
     <section>
-      <Head>
-        <title>{`${title ? title + '-' : ''}Jumiz`}</title>
-        <meta name="description" content="ecommerce website" />
-        <link rel="icon" href="/flavi.ico" />
-      </Head>
-
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 justify-between px-4 shadow-md items-center">

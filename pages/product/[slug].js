@@ -9,14 +9,14 @@ export default function ProductScreen() {
   const router = useRouter();
   const { query } = router;
   const { slug } = query;
-  const product = data.products.find((x) => x.slug === slug);
+  const product = data.products.find(x => x.slug === slug);
 
   if (!product) {
     return <div>Product not found</div>;
   }
 
   return (
-    <>
+    
       <Display title={product.name}>
         <div>
           <Link href="/">back to products</Link>
@@ -33,6 +33,6 @@ export default function ProductScreen() {
           </div>
         </div>
       </Display>
-    </>
+    
   );
 }
