@@ -1,4 +1,5 @@
-import Display from '@/components/Display';
+'use client';
+import Display from '@/components/Layout';
 import data from '@/utils/data';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,23 +17,23 @@ export default function ProductScreen() {
   }
 
   return (
-    <div>
+    <>
       <Display title={product.name}>
-        <div className="py-2 bg-black">
+        <div>
           <Link href="/">back to products</Link>
         </div>
         <div className="grid md:grid-cols-4 md:gap-3">
-          <div className="md:span-2">
+          <div className="md:span-2 ">
             <Image
               src={product.image}
               alt={product.name}
               width={640}
               height={640}
               priority
-            ></Image>
+            />
           </div>
         </div>
       </Display>
-    </div>
+    </>
   );
 }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Display({ title, children }) {
   return (
-    <div>
+    <section>
       <Head>
         <title>{`${title ? title + '-' : ''}Jumiz`}</title>
         <meta name="description" content="ecommerce website" />
@@ -14,14 +14,14 @@ export default function Display({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 justify-between px-4 shadow-md items-center">
-            <Link href="/">
+            <Link href="/" as="/" legacyBehavior>
               <a className="text-lg font-bold">Jumiz</a>
             </Link>
             <div>
-              <Link href="/cart">
+              <Link href="/cart" as="/" legacyBehavior>
                 <a className="p-2">cart</a>
               </Link>
-              <Link href="/login">
+              <Link href="/login" as="/" legacyBehavior>
                 <a className="p-2">Login</a>
               </Link>
             </div>
@@ -32,7 +32,6 @@ export default function Display({ title, children }) {
           copyright @ 2024 jumiz
         </footer>
       </div>
-    </div>
+    </section>
   );
 }
-
