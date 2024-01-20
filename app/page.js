@@ -1,6 +1,5 @@
-'use client';
 import React from 'react';
-import Display from '@/components/Layout';
+import Display from '@/components/Display';
 import ProductItem from '@/components/ProductItem';
 import data from '@/utils/data';
 

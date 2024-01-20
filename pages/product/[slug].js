@@ -1,5 +1,4 @@
-'use client';
-import Display from '@/components/Layout';
+import Display from '@/components/Display';
 import data from '@/utils/data';
 import Image from 'next/image';
 import Link from 'next/link';
