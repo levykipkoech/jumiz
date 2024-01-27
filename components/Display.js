@@ -3,10 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
-export default function Display({title, children }) {
+export default function Display({ title, children }) {
+
   return (
     <section>
-       <Head>
+      <Head>
         <title>{`${title ? title + '-' : ''}Jumiz`}</title>
         <meta name="description" content="ecommerce website" />
         <link rel="icon" href="/flavi.ico" />
