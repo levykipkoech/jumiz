@@ -10,7 +10,7 @@ export default function ProductScreen() {
   const { query } = router;
   const { slug } = query;
   const product = data.products.find((x) => x.slug === slug);
-  
+
   if (!product) {
     return <div>Product not found</div>;
   }
@@ -33,9 +33,26 @@ export default function ProductScreen() {
         <div>
           <ul>
             <li>
-              
+              <h1 className="text-lg">{product.name}</h1>
             </li>
+            <li>catagory: {product.category}</li>
+            <li>Brand :{product.brand}</li>
+            <li>
+              {product.rating} of {product.numReviews} reviews
+            </li>
+            <li>Description: {product.description}</li>
           </ul>
+        </div>
+        <div className="card p-5">
+          <div className="mb-2 flex justify-between">
+            <div>price</div>
+            <div>${product.price}</div>
+          </div>
+          <div className="mb-2 flex justify-between">
+            <div>status</div>
+            <div>{product.countInStock > 0 ? 'in stock' : 'unavailable'}</div>
+          </div>
+          <button className='primary-button w-full'>add to cart</button>
         </div>
       </div>
     </Display>
