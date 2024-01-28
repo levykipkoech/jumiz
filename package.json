@@ -17,6 +17,7 @@
     "xmldom": "^0.6.0"
   },
   "devDependencies": {
+    "@types/node": "20.11.9",
     "@types/react": "^18.2.48",
     "autoprefixer": "^10.4.16",
     "eslint": "^8",
